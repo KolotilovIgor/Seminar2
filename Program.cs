@@ -26,13 +26,37 @@
 //254 => 5^4 = 625
 //617 => 1
 
-int num = new Random().Next(100,1000);
-Console.WriteLine(num);
-int num2 = num/10 %10;
-int num3 = num % 10;
-int resault = 1;
-for (int i = 0; i <num3; i++)
+//int num = new Random().Next(100,1000);
+//Console.WriteLine(num);
+//int num2 = num/10 %10;
+//int num3 = num % 10;
+//int resault = 1;
+//for (int i = 0; i <num3; i++)
+//{
+//    resault =  resault * num2;
+//}
+//Console.WriteLine(resault);
+
+//Напишите программу, которая будет принимать на вход два
+//числа и выводить, является ли второе число кратным первому.
+//Если второе число некратно первому, то программа выводит
+//остаток от деления.
+//Примеры
+//14, 5 => нет, 4
+//16, 8 => да
+//4, 3 => нет, 1
+
+Console.WriteLine("Введите число");
+int num1 = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Введите число");
+int num2 = Convert.ToInt32(Console.ReadLine());
+
+if(num1 % num2 == 0)
 {
-    resault =  resault * num2;
+   System.Console.WriteLine("Да"); 
 }
-Console.WriteLine(resault);
+else
+{
+    System.Console.WriteLine($"Нет, {num1 % num2}");
+}
